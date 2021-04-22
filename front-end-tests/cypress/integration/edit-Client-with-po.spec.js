@@ -3,7 +3,7 @@
 import * as loginFuncs from "../pages/loginPage"
 import * as dashboardFuncs from "../pages/dashboardPage"
 import * as clientsFuncs from "../pages/clientsPage"
-import * as createClientsFuncs from "../pages/clientNewPage"
+import * as editClientsFuncs from "../pages/clientEditPage"
 
 describe('Testsuite', () =>{
     beforeEach(() =>{
@@ -13,12 +13,11 @@ describe('Testsuite', () =>{
         loginFuncs.performValidLogin('tester01', 'GteteqbQQgSr88SwNExUQv2ydb7xuf8c', 'Tester Hotel Overview')
     })
 
-    it('Perform new client creation', () =>{
+    it('Perform a client edition', () =>{
         dashboardFuncs.viewClient('Clients')
-        clientsFuncs.viewClientNew('New Client')
-        createClientsFuncs.createANewClient('Thi', 'thi@tester.se','0123456789', 'Clients')
-        //verify Last Client and log out
-        clientsFuncs.verifyLastClient('Thi', 'thi@tester.se', '0123456789')
+        clientsFuncs.editClientAction('Client')
+        editClientsFuncs.editLastClient('0702448717', 'Clients')
+        
         dashboardFuncs.performLogout('Login')
     })
 })
