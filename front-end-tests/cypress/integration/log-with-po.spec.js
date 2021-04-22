@@ -1,15 +1,15 @@
 /// <reference types="cypress" />
 
-import * as loginPage from "../pages/loginPage"
+import * as loginFuncs from "../pages/loginPage"
+import * as logoutFuncs from "../pages/logoutPage"
 
 describe('Testsuite', () =>{
-    beforeEach(() => {
+    
+    it('Perform a valid login and log out',() =>{
         cy.visit('http://localhost:3000')
-        loginPage.checkLoginPageTitle()
-
-    })
-
-    it('Login and log out',() =>{
-
+        loginFuncs.checkLoginPageTitle()
+        loginFuncs.confirmLabel('Login')
+        loginFuncs.performValidLogin('tester01', 'GteteqbQQgSr88SwNExUQv2ydb7xuf8c', 'Tester Hotel Overview')
+        logoutFuncs.performLogout('Login')
     })
 })
