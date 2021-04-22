@@ -7,7 +7,6 @@ const CLIENT_LIST = '.client'
 const THREE_DOTS_BTN = '.action > img'
 const EDIT_BTN = '.menu > :nth-child(1)'
 
-
 //Functions
 function viewClientNew(content){
     cy.get(CREATE_CLIENT_BTN).click()
