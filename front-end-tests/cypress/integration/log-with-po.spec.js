@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
 import * as loginFuncs from "../pages/loginPage"
-import * as logoutFuncs from "../pages/dashboardPage"
+import * as dashboardFuncs from "../pages/dashboardPage"
 
 describe('Testsuite', () =>{
     
@@ -10,6 +10,6 @@ describe('Testsuite', () =>{
         loginFuncs.checkLoginPageTitle()
         loginFuncs.confirmLabel('Login')
         loginFuncs.performValidLogin('tester01', 'GteteqbQQgSr88SwNExUQv2ydb7xuf8c', 'Tester Hotel Overview')
-        logoutFuncs.performLogout('Login')
+        dashboardFuncs.performLogout('Login')
     })
 })
