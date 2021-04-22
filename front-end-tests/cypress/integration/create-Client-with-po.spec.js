@@ -2,7 +2,8 @@
 
 import * as loginFuncs from "../pages/loginPage"
 import * as dashboardFuncs from "../pages/dashboardPage"
-
+import * as clientsFuncs from "../pages/clientsPage"
+import * as createClientSFuncs from "../pages/clientNewPage"
 
 describe('Testsuite', () =>{
     beforeEach(() =>{
@@ -13,7 +14,10 @@ describe('Testsuite', () =>{
     })
 
     it('Perform new client creation', () =>{
-        
-       dashboardFuncs.performLogout('Login')
+        dashboardFuncs.viewClient('Clients')
+        clientsFuncs.viewClientNew('New Client')
+        createClientSFuncs.createANewClient('Thi', 'thi@tester.se','0123456789', 'Clients')
+       
+        dashboardFuncs.performLogout('Login')
     })
 })
