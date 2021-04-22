@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "cypress:open":"cypress open",
+    "cypress:run":"cypress run --spec cypress/integration/log-spec.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
