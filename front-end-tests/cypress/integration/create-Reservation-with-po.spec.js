@@ -2,8 +2,8 @@
 
 import * as loginFuncs from '../pages/loginPage'
 import * as dashboardFuncs from '../pages/dashboardPage'
-
-
+import * as reserFuncs from '../pages/reservationsPage'
+import * as createResFuncs from '../pages/reserNewPage'
 
 describe('Testsuite', () =>{
     beforeEach(() =>{
@@ -15,9 +15,10 @@ describe('Testsuite', () =>{
 
     it('Perform a reservation creation', () =>{
         dashboardFuncs.viewReservation('Reservations')
-       
+        reserFuncs.createResAction('New Reservation')
+        createResFuncs.createReservation('2021-06-02', '2021-06-04', 'Thi (#3)', 'Floor 1, Room 101', 'ID: 2', 'Reservations')
 
-        //dashboardFuncs.performLogout('Login')
+        dashboardFuncs.performLogout('Login')
 
     })
 })
