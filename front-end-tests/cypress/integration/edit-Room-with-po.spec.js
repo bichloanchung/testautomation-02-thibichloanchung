@@ -3,7 +3,7 @@
 import * as loginFuncs from '../pages/loginPage'
 import * as dashboardFuncs from '../pages/dashboardPage'
 import * as roomsFuncs from '../pages/roomsPage'
-import * as createRoomFuncs from '../pages/roomNewPage'
+import * as editRoomsFuncs from '../pages/roomEditPage'
 
 describe('Testsuite', () =>{
     beforeEach(() =>{
@@ -13,11 +13,11 @@ describe('Testsuite', () =>{
         loginFuncs.performValidLogin('tester01', 'GteteqbQQgSr88SwNExUQv2ydb7xuf8c', 'Tester Hotel Overview')
     })
 
-    it('Perform a new room creation', () =>{
+    it('Perform last room edition', () =>{
         dashboardFuncs.viewRoom('Rooms')
-        roomsFuncs.viewRoomNew('New Room')
-        createRoomFuncs.createNewRoom('Twin', '201', '02', '2000', 'Balcony', 'Rooms')
-
+        roomsFuncs.editRoomAction('Room')
+        editRoomsFuncs.editRoomsPrice('2500','Rooms')
+        
         dashboardFuncs.performLogout('Login')
 
     })
