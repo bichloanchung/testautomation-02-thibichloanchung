@@ -5,6 +5,7 @@ const LOGOUT_BTN = '.user > .btn'
 const VIEW_CLIENTS_BTN = '.blocks > :nth-child(2) > .btn'
 const VIEW_ROOM_BTN = ':nth-child(1) > .btn'
 const VIEW_BILL_BTN = ':nth-child(3) > .btn'
+const VIEW_RESERVATION_BTN = ':nth-child(4) > .btn'
 
 //Functions
 function performLogout(content){
@@ -26,10 +27,17 @@ function viewBill(content){
     cy.get(VIEW_BILL_BTN).click()
     cy.contains(content)
 }
+
+function viewReservation(content){
+    cy.get(VIEW_RESERVATION_BTN).click()
+    cy.contains(content)
+}
+
 //Exports
 module.exports ={
     performLogout,
     viewClient,
     viewRoom,
-    viewBill
+    viewBill,
+    viewReservation
 }
