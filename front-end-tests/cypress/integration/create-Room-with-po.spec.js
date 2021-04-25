@@ -5,6 +5,12 @@ import * as dashboardFuncs from '../pages/dashboardPage'
 import * as roomsFuncs from '../pages/roomsPage'
 import * as createRoomFuncs from '../pages/roomNewPage'
 
+var faker = require('faker');
+
+let randomRoom = faker.datatype.number();
+let randomFloor = faker.datatype.hexaDecimal();
+let randomPrice = faker.commerce.price();
+
 describe('Testsuite', () =>{
     beforeEach(() =>{
         cy.visit('http://localhost:3000')
@@ -16,7 +22,7 @@ describe('Testsuite', () =>{
     it('Perform a new room creation', () =>{
         dashboardFuncs.viewRoom('Rooms')
         roomsFuncs.viewRoomNew('New Room')
-        createRoomFuncs.createNewRoom('Twin', '201', '02', '2000', 'Balcony', 'Rooms')
+        createRoomFuncs.createNewRoom('Twin', randomRoom, randomFloor, randomPrice, 'Balcony', 'Rooms')
 
         dashboardFuncs.performLogout('Login')
 
