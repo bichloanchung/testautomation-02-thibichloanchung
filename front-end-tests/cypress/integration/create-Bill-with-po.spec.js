@@ -5,6 +5,10 @@ import * as dashboardFuncs from '../pages/dashboardPage'
 import * as billsFuncs from '../pages/billsPage'
 import * as createBillsFuncs from '../pages/billNewPage'
 
+var faker = require('faker');
+
+let randomValue = faker.commerce.price();
+
 
 describe('Testsuite', () =>{
     beforeEach(() =>{
@@ -17,7 +21,7 @@ describe('Testsuite', () =>{
     it('Perform a bill creation', () =>{
         dashboardFuncs.viewBill('Bills')
         billsFuncs.createBillAction('New Bill')
-        createBillsFuncs.createNewBill('5000','Bills')
+        createBillsFuncs.createNewBill(randomValue,'Bills')
 
         dashboardFuncs.performLogout('Login')
 
