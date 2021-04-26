@@ -5,6 +5,8 @@ import * as dashboardFuncs from "../pages/dashboardPage"
 import * as clientsFuncs from "../pages/clientsPage"
 import * as editClientsFuncs from "../pages/clientEditPage"
 
+import faker from 'faker'
+
 describe('Testsuite', () =>{
     beforeEach(() =>{
         cy.visit('http://localhost:3000')
@@ -17,7 +19,8 @@ describe('Testsuite', () =>{
         dashboardFuncs.viewClient('Clients')
         clientsFuncs.editClientAction('Client')
         
-        editClientsFuncs.editLastClient('0702448717', 'Clients')
+        let randomPhoneN = faker.phone.phoneNumber()
+        editClientsFuncs.editLastClient(randomPhoneN, 'Clients')
         cy.log('Last client phones edited!')
         dashboardFuncs.performLogout('Login')
     })

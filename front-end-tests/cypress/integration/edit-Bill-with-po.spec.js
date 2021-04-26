@@ -5,6 +5,7 @@ import * as dashboardFuncs from '../pages/dashboardPage'
 import * as billsFuncs from '../pages/billsPage'
 import * as editBillFuncs from '../pages/editBillPage'
 
+import faker from 'faker'
 
 describe('Testsuite', () =>{
     beforeEach(() =>{
@@ -18,7 +19,8 @@ describe('Testsuite', () =>{
         dashboardFuncs.viewBill('Bills')
         billsFuncs.editBillAction('Bill')
 
-        editBillFuncs.editLastBill('7000', 'Bills')
+        let randomBillValue = faker.commerce.price()
+        editBillFuncs.editLastBill(randomBillValue, 'Bills')
         cy.log('Last bill edited')
         
         dashboardFuncs.performLogout('Login')

@@ -5,6 +5,8 @@ import * as dashboardFuncs from '../pages/dashboardPage'
 import * as roomsFuncs from '../pages/roomsPage'
 import * as editRoomsFuncs from '../pages/roomEditPage'
 
+import faker from 'faker'
+
 describe('Testsuite', () =>{
     beforeEach(() =>{
         cy.visit('http://localhost:3000')
@@ -17,7 +19,8 @@ describe('Testsuite', () =>{
         dashboardFuncs.viewRoom('Rooms')
         roomsFuncs.editRoomAction('Room')
         
-        editRoomsFuncs.editRoomsPrice('2500','Rooms')
+        let randomPriceN = faker.commerce.price()
+        editRoomsFuncs.editRoomsPrice(randomPriceN,'Rooms')
         cy.log('Last room prices edited')
         
         dashboardFuncs.performLogout('Login')
