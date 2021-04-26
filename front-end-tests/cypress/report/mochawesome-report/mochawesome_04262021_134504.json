@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-26T11:44:58.127Z",
+    "end": "2021-04-26T11:45:04.742Z",
+    "duration": 6615,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e08d30d7-581f-42f4-bdbe-fe6db5ca90a0",
+      "title": "",
+      "fullFile": "cypress/integration/edit-Client-with-po.spec.js",
+      "file": "cypress/integration/edit-Client-with-po.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "27dc5c51-b291-44fb-a097-169465698700",
+          "title": "Testsuite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Perform a client edition",
+              "fullTitle": "Testsuite Perform a client edition",
+              "timedOut": null,
+              "duration": 6383,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "dashboardFuncs.viewClient('Clients');\nclientsFuncs.editClientAction('Client');\nlet randomPhoneN = _faker.default.phone.phoneNumber();\neditClientsFuncs.editLastClient(randomPhoneN, 'Clients');\ncy.log('Last client phones edited!');\ndashboardFuncs.performLogout('Login');",
+              "err": {},
+              "uuid": "fd4b5cc4-abf0-47f1-9443-4bb1cecdfe02",
+              "parentUUID": "27dc5c51-b291-44fb-a097-169465698700",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fd4b5cc4-abf0-47f1-9443-4bb1cecdfe02"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6383,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

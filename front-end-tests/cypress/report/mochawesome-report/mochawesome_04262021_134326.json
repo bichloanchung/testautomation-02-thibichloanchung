@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-26T11:43:19.188Z",
+    "end": "2021-04-26T11:43:26.717Z",
+    "duration": 7529,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c01a4192-e229-4c3b-be6f-fb8d66a645e2",
+      "title": "",
+      "fullFile": "cypress/integration/create-Room-with-po.spec.js",
+      "file": "cypress/integration/create-Room-with-po.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a3fa6e05-ef5a-4ffe-8201-4dac6a10b788",
+          "title": "Testsuite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Perform a new room creation",
+              "fullTitle": "Testsuite Perform a new room creation",
+              "timedOut": null,
+              "duration": 7422,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "dashboardFuncs.viewRoom('Rooms');\nroomsFuncs.viewRoomNew('New Room');\ncy.log('create room with some random values');\ncreateRoomFuncs.createNewRoom('Twin', randomRoom, randomFloor, randomPrice, 'Balcony', 'Rooms');\ndashboardFuncs.performLogout('Login');",
+              "err": {},
+              "uuid": "0c9f6381-94e9-44ea-8bf7-7f2a3f8de064",
+              "parentUUID": "a3fa6e05-ef5a-4ffe-8201-4dac6a10b788",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0c9f6381-94e9-44ea-8bf7-7f2a3f8de064"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7422,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

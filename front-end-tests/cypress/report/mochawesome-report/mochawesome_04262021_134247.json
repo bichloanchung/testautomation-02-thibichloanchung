@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-26T11:42:40.892Z",
+    "end": "2021-04-26T11:42:47.744Z",
+    "duration": 6852,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "52d60233-ed1e-4457-92d1-e4d63a818ab1",
+      "title": "",
+      "fullFile": "cypress/integration/create-Reservation-with-po.spec.js",
+      "file": "cypress/integration/create-Reservation-with-po.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6bd7bf29-b585-40cd-9ee7-dcc2e43827ed",
+          "title": "Testsuite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Perform a reservation creation",
+              "fullTitle": "Testsuite Perform a reservation creation",
+              "timedOut": null,
+              "duration": 6671,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "dashboardFuncs.viewReservation('Reservations');\nreserFuncs.createResAction('New Reservation');\nlet dateRecent = faker.date.recent();\nvar year = dateRecent.getFullYear();\nvar month = dateRecent.getMonth() + 1;\nvar date = dateRecent.getDate() + 1;\nif (month < 10) month = '0' + month;\nif (date < 10) date = '0' + date;\nvar randomDateCome = [year, month, date].join('-');\nlet dateFuture = faker.date.future();\nvar year = dateFuture.getFullYear();\nvar month = dateFuture.getMonth() + 1;\nvar date = dateFuture.getDate() + 1;\nif (month < 10) month = '0' + month;\nif (date < 10) date = '0' + date;\nvar randomDateLeave = [year, month, date].join('-');\ncreateResFuncs.createReservation(randomDateCome, randomDateLeave, 'Jonas Hellman (#1)', 'Floor 1, Room 101', 'ID: 1', 'Reservations');\ncy.log('create reservation with radom date successful');\ndashboardFuncs.performLogout('Login');",
+              "err": {},
+              "uuid": "251d2328-3900-4ff4-bd18-863d5c15f0ee",
+              "parentUUID": "6bd7bf29-b585-40cd-9ee7-dcc2e43827ed",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "251d2328-3900-4ff4-bd18-863d5c15f0ee"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6671,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

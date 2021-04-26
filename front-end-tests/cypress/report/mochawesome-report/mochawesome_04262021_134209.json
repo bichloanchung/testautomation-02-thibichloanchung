@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-26T11:42:02.161Z",
+    "end": "2021-04-26T11:42:09.815Z",
+    "duration": 7654,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c92eb709-b618-4f29-90b2-1c034dc4ffad",
+      "title": "",
+      "fullFile": "cypress/integration/create-Client-with-po.spec.js",
+      "file": "cypress/integration/create-Client-with-po.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "940fcada-34ce-4adc-b827-37544e5e0bd7",
+          "title": "Testsuite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Perform new client creation",
+              "fullTitle": "Testsuite Perform new client creation",
+              "timedOut": null,
+              "duration": 7458,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "dashboardFuncs.viewClient('Clients');\nclientsFuncs.viewClientNew('New Client');\ncreateClientsFuncs.createANewClient(randomName, randomMail, randomPhone, 'Clients');\ncy.log('Verify Last Client created with random faker...');\nclientsFuncs.verifyLastClient(randomName, randomMail, randomPhone);\ndashboardFuncs.performLogout('Login');",
+              "err": {},
+              "uuid": "bac42087-48f3-40b4-a874-7d2caa06fc22",
+              "parentUUID": "940fcada-34ce-4adc-b827-37544e5e0bd7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bac42087-48f3-40b4-a874-7d2caa06fc22"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7458,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

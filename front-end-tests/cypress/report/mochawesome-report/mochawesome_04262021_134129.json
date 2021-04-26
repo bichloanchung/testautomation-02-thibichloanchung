@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-26T11:41:23.004Z",
+    "end": "2021-04-26T11:41:29.287Z",
+    "duration": 6283,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a3c7223e-8348-486f-b9aa-8f02c161a574",
+      "title": "",
+      "fullFile": "cypress/integration/create-Bill-with-po.spec.js",
+      "file": "cypress/integration/create-Bill-with-po.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d1ee945e-ccd9-4fb8-85b4-97d675b33bd9",
+          "title": "Testsuite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Perform a bill creation",
+              "fullTitle": "Testsuite Perform a bill creation",
+              "timedOut": null,
+              "duration": 6180,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "dashboardFuncs.viewBill('Bills');\nbillsFuncs.createBillAction('New Bill');\ncreateBillsFuncs.createNewBill(randomValue, 'Bills');\ncy.log('create bill with random value prices successful');\ndashboardFuncs.performLogout('Login');",
+              "err": {},
+              "uuid": "418f9966-4f38-41a1-8af2-8ea1c28d8bd3",
+              "parentUUID": "d1ee945e-ccd9-4fb8-85b4-97d675b33bd9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "418f9966-4f38-41a1-8af2-8ea1c28d8bd3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6180,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

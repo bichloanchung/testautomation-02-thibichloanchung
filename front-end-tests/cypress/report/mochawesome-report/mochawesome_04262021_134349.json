@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-26T11:43:44.186Z",
+    "end": "2021-04-26T11:43:49.892Z",
+    "duration": 5706,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f2e8c4c0-6bb0-4d4a-b0f6-4d14348e5b4f",
+      "title": "",
+      "fullFile": "cypress/integration/delete-Reservation-with-po.spec.js",
+      "file": "cypress/integration/delete-Reservation-with-po.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "357bd1b0-4a70-4c89-abd6-6f47976a8206",
+          "title": "Testsuite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Perform a reservation deleted",
+              "fullTitle": "Testsuite Perform a reservation deleted",
+              "timedOut": null,
+              "duration": 5611,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "dashboardFuncs.viewReservation('Reservations');\nreserFuncs.deleteReservation('Reservations');\ncy.log('Last reservation deleted');\ndashboardFuncs.performLogout('Login');",
+              "err": {},
+              "uuid": "0f882287-28e8-4de3-bfee-df68623ac5f2",
+              "parentUUID": "357bd1b0-4a70-4c89-abd6-6f47976a8206",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0f882287-28e8-4de3-bfee-df68623ac5f2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5611,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}
