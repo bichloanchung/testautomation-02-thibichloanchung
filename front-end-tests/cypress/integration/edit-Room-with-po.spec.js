@@ -16,7 +16,9 @@ describe('Testsuite', () =>{
     it('Perform last room edition', () =>{
         dashboardFuncs.viewRoom('Rooms')
         roomsFuncs.editRoomAction('Room')
+        
         editRoomsFuncs.editRoomsPrice('2500','Rooms')
+        cy.log('Last room prices edited')
         
         dashboardFuncs.performLogout('Login')
 

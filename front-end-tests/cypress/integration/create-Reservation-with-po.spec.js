@@ -19,8 +19,6 @@ describe('Testsuite', function(){
         dashboardFuncs.viewReservation('Reservations')
         reserFuncs.createResAction('New Reservation')
 
-        //let randomDateCome = recentDate.getFullYear()+'-'+recentDate.getMonth()+'-'+recentDate.getDate()
-        //let randomDateLeave = futureDate.getFullYear()+'-'+futureDate.getMonth()+'-'+futureDate.getDate()
         let dateRecent = faker.date.recent();
             var year = dateRecent.getFullYear()
             var month = dateRecent.getMonth()+1
@@ -30,19 +28,21 @@ describe('Testsuite', function(){
             if (date < 10) date = '0' + date
         
             var randomDateCome = [year,month,date].join('-')
+        
         let dateFuture = faker.date.future();
 
             var year = dateFuture.getFullYear()
             var month = dateFuture.getMonth()+1
             var date = dateFuture.getDate()+1
+            
             if (month < 10) month = '0'+ month
             if (date < 10) date = '0' + date
         
             var randomDateLeave = [year,month,date].join('-')
         
-        
         createResFuncs.createReservation(randomDateCome, randomDateLeave, 'Jonas Hellman (#1)', 'Floor 1, Room 101', 'ID: 1', 'Reservations')
-
+        cy.log('create reservation with radom date successful')
+        
         dashboardFuncs.performLogout('Login')
 
     })

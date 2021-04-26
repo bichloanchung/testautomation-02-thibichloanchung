@@ -16,7 +16,7 @@ describe('Testsuite', () =>{
     it('Perform a reservation deleted', () =>{
         dashboardFuncs.viewReservation('Reservations')
         reserFuncs.deleteReservation('Reservations')
-        
+        cy.log('Last reservation deleted')
         dashboardFuncs.performLogout('Login')
 
     })

@@ -22,8 +22,10 @@ describe('Testsuite', () =>{
     it('Perform new client creation', () =>{
         dashboardFuncs.viewClient('Clients')
         clientsFuncs.viewClientNew('New Client')
+
         createClientsFuncs.createANewClient(randomName, randomMail,randomPhone, 'Clients')
-        cy.log('Verify Last Client created with random faker  and log out --')
+        
+        cy.log('Verify Last Client created with random faker...')
         clientsFuncs.verifyLastClient(randomName, randomMail,randomPhone)
         dashboardFuncs.performLogout('Login')
     })

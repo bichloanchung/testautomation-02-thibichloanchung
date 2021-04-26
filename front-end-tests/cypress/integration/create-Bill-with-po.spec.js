@@ -21,8 +21,10 @@ describe('Testsuite', () =>{
     it('Perform a bill creation', () =>{
         dashboardFuncs.viewBill('Bills')
         billsFuncs.createBillAction('New Bill')
-        createBillsFuncs.createNewBill(randomValue,'Bills')
 
+        createBillsFuncs.createNewBill(randomValue,'Bills')
+        cy.log('create bill with random value prices successful')
+        
         dashboardFuncs.performLogout('Login')
 
     })

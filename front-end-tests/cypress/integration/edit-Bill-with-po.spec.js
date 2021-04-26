@@ -17,8 +17,10 @@ describe('Testsuite', () =>{
     it('Perform bill edition', () =>{
         dashboardFuncs.viewBill('Bills')
         billsFuncs.editBillAction('Bill')
+
         editBillFuncs.editLastBill('7000', 'Bills')
-       
+        cy.log('Last bill edited')
+        
         dashboardFuncs.performLogout('Login')
 
     })

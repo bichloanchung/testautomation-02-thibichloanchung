@@ -22,6 +22,8 @@ describe('Testsuite', () =>{
     it('Perform a new room creation', () =>{
         dashboardFuncs.viewRoom('Rooms')
         roomsFuncs.viewRoomNew('New Room')
+
+        cy.log('create room with some random values')
         createRoomFuncs.createNewRoom('Twin', randomRoom, randomFloor, randomPrice, 'Balcony', 'Rooms')
 
         dashboardFuncs.performLogout('Login')

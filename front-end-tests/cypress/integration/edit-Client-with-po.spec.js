@@ -16,8 +16,9 @@ describe('Testsuite', () =>{
     it('Perform a client edition', () =>{
         dashboardFuncs.viewClient('Clients')
         clientsFuncs.editClientAction('Client')
-        editClientsFuncs.editLastClient('0702448717', 'Clients')
         
+        editClientsFuncs.editLastClient('0702448717', 'Clients')
+        cy.log('Last client phones edited!')
         dashboardFuncs.performLogout('Login')
     })
 })
