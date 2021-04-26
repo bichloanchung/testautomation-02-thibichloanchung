@@ -1,0 +1,570 @@
+{
+  "stats": {
+    "suites": 9,
+    "tests": 9,
+    "passes": 9,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-26T11:41:23.004Z",
+    "end": "2021-04-26T11:46:22.906Z",
+    "duration": 62420,
+    "testsRegistered": 9,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a3c7223e-8348-486f-b9aa-8f02c161a574",
+      "title": "",
+      "fullFile": "cypress/integration/create-Bill-with-po.spec.js",
+      "file": "cypress/integration/create-Bill-with-po.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d1ee945e-ccd9-4fb8-85b4-97d675b33bd9",
+          "title": "Testsuite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Perform a bill creation",
+              "fullTitle": "Testsuite Perform a bill creation",
+              "timedOut": null,
+              "duration": 6180,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "dashboardFuncs.viewBill('Bills');\nbillsFuncs.createBillAction('New Bill');\ncreateBillsFuncs.createNewBill(randomValue, 'Bills');\ncy.log('create bill with random value prices successful');\ndashboardFuncs.performLogout('Login');",
+              "err": {},
+              "uuid": "418f9966-4f38-41a1-8af2-8ea1c28d8bd3",
+              "parentUUID": "d1ee945e-ccd9-4fb8-85b4-97d675b33bd9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "418f9966-4f38-41a1-8af2-8ea1c28d8bd3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6180,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "c92eb709-b618-4f29-90b2-1c034dc4ffad",
+      "title": "",
+      "fullFile": "cypress/integration/create-Client-with-po.spec.js",
+      "file": "cypress/integration/create-Client-with-po.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "940fcada-34ce-4adc-b827-37544e5e0bd7",
+          "title": "Testsuite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Perform new client creation",
+              "fullTitle": "Testsuite Perform new client creation",
+              "timedOut": null,
+              "duration": 7458,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "dashboardFuncs.viewClient('Clients');\nclientsFuncs.viewClientNew('New Client');\ncreateClientsFuncs.createANewClient(randomName, randomMail, randomPhone, 'Clients');\ncy.log('Verify Last Client created with random faker...');\nclientsFuncs.verifyLastClient(randomName, randomMail, randomPhone);\ndashboardFuncs.performLogout('Login');",
+              "err": {},
+              "uuid": "bac42087-48f3-40b4-a874-7d2caa06fc22",
+              "parentUUID": "940fcada-34ce-4adc-b827-37544e5e0bd7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bac42087-48f3-40b4-a874-7d2caa06fc22"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7458,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "52d60233-ed1e-4457-92d1-e4d63a818ab1",
+      "title": "",
+      "fullFile": "cypress/integration/create-Reservation-with-po.spec.js",
+      "file": "cypress/integration/create-Reservation-with-po.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6bd7bf29-b585-40cd-9ee7-dcc2e43827ed",
+          "title": "Testsuite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Perform a reservation creation",
+              "fullTitle": "Testsuite Perform a reservation creation",
+              "timedOut": null,
+              "duration": 6671,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "dashboardFuncs.viewReservation('Reservations');\nreserFuncs.createResAction('New Reservation');\nlet dateRecent = faker.date.recent();\nvar year = dateRecent.getFullYear();\nvar month = dateRecent.getMonth() + 1;\nvar date = dateRecent.getDate() + 1;\nif (month < 10) month = '0' + month;\nif (date < 10) date = '0' + date;\nvar randomDateCome = [year, month, date].join('-');\nlet dateFuture = faker.date.future();\nvar year = dateFuture.getFullYear();\nvar month = dateFuture.getMonth() + 1;\nvar date = dateFuture.getDate() + 1;\nif (month < 10) month = '0' + month;\nif (date < 10) date = '0' + date;\nvar randomDateLeave = [year, month, date].join('-');\ncreateResFuncs.createReservation(randomDateCome, randomDateLeave, 'Jonas Hellman (#1)', 'Floor 1, Room 101', 'ID: 1', 'Reservations');\ncy.log('create reservation with radom date successful');\ndashboardFuncs.performLogout('Login');",
+              "err": {},
+              "uuid": "251d2328-3900-4ff4-bd18-863d5c15f0ee",
+              "parentUUID": "6bd7bf29-b585-40cd-9ee7-dcc2e43827ed",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "251d2328-3900-4ff4-bd18-863d5c15f0ee"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6671,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "c01a4192-e229-4c3b-be6f-fb8d66a645e2",
+      "title": "",
+      "fullFile": "cypress/integration/create-Room-with-po.spec.js",
+      "file": "cypress/integration/create-Room-with-po.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a3fa6e05-ef5a-4ffe-8201-4dac6a10b788",
+          "title": "Testsuite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Perform a new room creation",
+              "fullTitle": "Testsuite Perform a new room creation",
+              "timedOut": null,
+              "duration": 7422,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "dashboardFuncs.viewRoom('Rooms');\nroomsFuncs.viewRoomNew('New Room');\ncy.log('create room with some random values');\ncreateRoomFuncs.createNewRoom('Twin', randomRoom, randomFloor, randomPrice, 'Balcony', 'Rooms');\ndashboardFuncs.performLogout('Login');",
+              "err": {},
+              "uuid": "0c9f6381-94e9-44ea-8bf7-7f2a3f8de064",
+              "parentUUID": "a3fa6e05-ef5a-4ffe-8201-4dac6a10b788",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0c9f6381-94e9-44ea-8bf7-7f2a3f8de064"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7422,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "f2e8c4c0-6bb0-4d4a-b0f6-4d14348e5b4f",
+      "title": "",
+      "fullFile": "cypress/integration/delete-Reservation-with-po.spec.js",
+      "file": "cypress/integration/delete-Reservation-with-po.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "357bd1b0-4a70-4c89-abd6-6f47976a8206",
+          "title": "Testsuite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Perform a reservation deleted",
+              "fullTitle": "Testsuite Perform a reservation deleted",
+              "timedOut": null,
+              "duration": 5611,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "dashboardFuncs.viewReservation('Reservations');\nreserFuncs.deleteReservation('Reservations');\ncy.log('Last reservation deleted');\ndashboardFuncs.performLogout('Login');",
+              "err": {},
+              "uuid": "0f882287-28e8-4de3-bfee-df68623ac5f2",
+              "parentUUID": "357bd1b0-4a70-4c89-abd6-6f47976a8206",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0f882287-28e8-4de3-bfee-df68623ac5f2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5611,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "de69c446-5a8e-4dd2-a6c7-80ee5f3069d3",
+      "title": "",
+      "fullFile": "cypress/integration/edit-Bill-with-po.spec.js",
+      "file": "cypress/integration/edit-Bill-with-po.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3094e786-7809-4582-ba1c-52753913303a",
+          "title": "Testsuite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Perform bill edition",
+              "fullTitle": "Testsuite Perform bill edition",
+              "timedOut": null,
+              "duration": 7410,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "dashboardFuncs.viewBill('Bills');\nbillsFuncs.editBillAction('Bill');\nlet randomBillValue = _faker.default.commerce.price();\neditBillFuncs.editLastBill(randomBillValue, 'Bills');\ncy.log('Last bill edited');\ndashboardFuncs.performLogout('Login');",
+              "err": {},
+              "uuid": "65630607-3dd0-4b21-8a8e-2642086f968c",
+              "parentUUID": "3094e786-7809-4582-ba1c-52753913303a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "65630607-3dd0-4b21-8a8e-2642086f968c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7410,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "e08d30d7-581f-42f4-bdbe-fe6db5ca90a0",
+      "title": "",
+      "fullFile": "cypress/integration/edit-Client-with-po.spec.js",
+      "file": "cypress/integration/edit-Client-with-po.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "27dc5c51-b291-44fb-a097-169465698700",
+          "title": "Testsuite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Perform a client edition",
+              "fullTitle": "Testsuite Perform a client edition",
+              "timedOut": null,
+              "duration": 6383,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "dashboardFuncs.viewClient('Clients');\nclientsFuncs.editClientAction('Client');\nlet randomPhoneN = _faker.default.phone.phoneNumber();\neditClientsFuncs.editLastClient(randomPhoneN, 'Clients');\ncy.log('Last client phones edited!');\ndashboardFuncs.performLogout('Login');",
+              "err": {},
+              "uuid": "fd4b5cc4-abf0-47f1-9443-4bb1cecdfe02",
+              "parentUUID": "27dc5c51-b291-44fb-a097-169465698700",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fd4b5cc4-abf0-47f1-9443-4bb1cecdfe02"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6383,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "a99df073-7593-458b-a0bd-e84794081f6d",
+      "title": "",
+      "fullFile": "cypress/integration/edit-Room-with-po.spec.js",
+      "file": "cypress/integration/edit-Room-with-po.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5143c322-6eac-4939-9b55-75a1999bf466",
+          "title": "Testsuite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Perform last room edition",
+              "fullTitle": "Testsuite Perform last room edition",
+              "timedOut": null,
+              "duration": 9765,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "dashboardFuncs.viewRoom('Rooms');\nroomsFuncs.editRoomAction('Room');\nlet randomPriceN = _faker.default.commerce.price();\neditRoomsFuncs.editRoomsPrice(randomPriceN, 'Rooms');\ncy.log('Last room prices edited');\ndashboardFuncs.performLogout('Login');",
+              "err": {},
+              "uuid": "45b9289f-cafb-49ca-a7af-ef9665f52372",
+              "parentUUID": "5143c322-6eac-4939-9b55-75a1999bf466",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "45b9289f-cafb-49ca-a7af-ef9665f52372"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9765,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "8c987da9-8949-4c99-a392-457c46132f48",
+      "title": "",
+      "fullFile": "cypress/integration/log-with-po.spec.js",
+      "file": "cypress/integration/log-with-po.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3906c71c-c950-43d7-b1f2-f0b72f84b2cc",
+          "title": "Testsuite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Perform a valid login and log out",
+              "fullTitle": "Testsuite Perform a valid login and log out",
+              "timedOut": null,
+              "duration": 5520,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000');\nloginFuncs.checkLoginPageTitle();\nloginFuncs.confirmLabel('Login');\nloginFuncs.performValidLogin('tester01', 'GteteqbQQgSr88SwNExUQv2ydb7xuf8c', 'Tester Hotel Overview');\ndashboardFuncs.performLogout('Login');",
+              "err": {},
+              "uuid": "e56a9fdb-de3a-46d0-92d6-231bfe3481bd",
+              "parentUUID": "3906c71c-c950-43d7-b1f2-f0b72f84b2cc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e56a9fdb-de3a-46d0-92d6-231bfe3481bd"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5520,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}
