@@ -9,7 +9,15 @@ describe('Testsuite', () =>{
         cy.visit('http://localhost:3000')
         loginFuncs.checkLoginPageTitle()
         loginFuncs.confirmLabel('Login')
+        // ->> we are at index (login) page!
+        cy.log('At login page!')
+        cy.percySnapshot('index-page')
+
         loginFuncs.performValidLogin('tester01', 'GteteqbQQgSr88SwNExUQv2ydb7xuf8c', 'Tester Hotel Overview')
-        dashboardFuncs.performLogout('Login')
+        // ->> we are at dashboard page
+        cy.log('At dashboard page!')
+        cy.percySnapshot('dashboard-page')
+        
+        //dashboardFuncs.performLogout('Login')
     })
 })
